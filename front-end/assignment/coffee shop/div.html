@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> COFFEE SHOP </title>
+	</head>
+	<body>
+
+		<div id="contianer1" style="display:none">
+		hello
+		</div>
+		<div id="contianer2" style="display:none">
+		hey
+		</div>
+		<div id="contianer3" style="display:none"	>
+		hii
+		</div>
+		<button onclick="myFunction(count++)">try</button>
+
+	</body>
+	<script type="text/javascript">
+	console.log(count);
+  		var count = 0;
+ 
+		function myFunction(count)
+		{
+			count++;
+
+			 if (count==1){
+				document.getElementById('contianer1').style.display="block";
+
+				document.getElementById('contianer2').style.display="none";
+
+				document.getElementById('contianer3').style.display="none";
+
+			}
+			else if (count==2) {
+				document.getElementById('contianer1').style.display="none";
+
+				document.getElementById('contianer2').style.display="block";
+
+				document.getElementById('contianer3').style.display="none";
+			}
+			else
+			{
+				document.getElementById('contianer1').style.display="none";
+
+				document.getElementById('contianer2').style.display="none";
+
+				document.getElementById('contianer3').style.display="block";
+			}
+
+		}
+		for(i=0;i<10;i++)
+		{
+		
+		console.log(i);
+		}
+	</script>
+	</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> javascript </title>
+	</head>
+	<body>
+	<select id="places" onchange="myFunction()">
+	<option>mysore</option>
+	<option>mandya</option>
+	<option>maddur</option>
+	<option>banglore</option>
+	</select>
+	<p>select the places neede</p>
+	<p id="demo"></p>
+	<p class="class">one</p>
+	<p class="class">two</p>
+	<p class="class">three</p>
+	<p class="class">four</p>
+	<p class="class">five</p>
+	<img onmouseout="bigimg(this)" alt="ballon" onmouseover="normalimg(this)" src="ballon.jpeg" width="50" height="50" border="2">
+	<script type="text/javascript">
+	function bigimg(x)
+	{
+		x.style.height="100px";
+		x.style.width="100px";
+	}
+	function normalimg(x)
+	{
+		x.style.height="50px";
+		x.style.width="50px";
+	}
+
+		function myFunction()
+		{
+			for(i=0;i<document.getElementsByClassName('class').length;i++)
+			{
+				var x=document.getElementsByClassName('class')[i].innerHTML;
+
+				console.log(x);
+			}
+			 var a = document.getElementById('places');
+			  a.style.color = "red";
+			 document.getElementById('demo').innerHTML="the selected place is " + a;
+		}
+			
+	</script>
+	</body>
+	</html>

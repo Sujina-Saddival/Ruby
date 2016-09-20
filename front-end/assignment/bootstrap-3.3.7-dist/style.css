@@ -1,0 +1,58 @@
+body{
+	background-color:white;
+}
+
+.left-section{
+background-color: red;
+padding: 12px;
+
+
+}
+
+.right-section{
+background-color: yellow;
+padding: 12px;
+}
+
+label{
+	color: green;
+}
+form{
+	border-style: solid;
+	padding: 35%;
+
+}
+ @media (max-width: 480px) { 
+ 	h1{
+ 		font-size: 12px;
+ 		color: black;
+ 		}}
+
+  
+/*mobile landscape*/
+@media (min-width: 481px) and (max-width: 599px) {h1{
+ 		font-size: 22px;
+ 		color: green;
+ 		} }
+
+ 
+/ * small tablet portrait*/
+@media (min-width: 600px) and (max-width: 767px) {h1{
+ 		font-size: 32px;
+ 		}}
+
+ 
+/*small tablet landscape*/
+@media (min-width: 768px) and (max-width: 959px) { h1{
+ 		font-size: 42px;
+ 		}}
+
+ 
+/*Tablet landscape (1024x768)*/
+
+@media (min-width: 960px) and (max-width: 1199px) {h1{
+ 		font-size: 52px;
+ 		} }
+ 		#bs-example-navbar-collapse-1{
+ 			background-color: orange;
+ 		}

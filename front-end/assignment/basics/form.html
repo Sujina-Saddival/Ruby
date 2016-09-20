@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+
+</head>
+<body>
+<form>
+
+<p>Enter first name</p>
+	<input id="fname" type="text"></input>
+	<p>Enter last name</p>	
+	<input id="lname"  type="text"></input>
+	<p>Place
+	<select id="option"  onchange="myFunction()">
+		<option value="bang">bang</option>
+		<option value="madya">madya</option>
+		<option value="mysore">mysore</option>
+		<option value="maddur">maddur</option>
+		<option value="ram">ram</option>
+	</select></br>
+	<p> Enter company name</p>
+	<input id="company" type="text"></input>
+</form>
+
+
+
+
+
+<img src="mainadver.jpg" onmouseover="changeImg(this)" onmouseout="normalImg(this)" width="500" height="200" align="right">
+<button onclick="subMit()">click here</button>
+
+
+<p id="first"></p>
+<p id="first1"></p>
+<p id="first2"></p>
+<p id="first3"></p>
+<p id="demo"></p>
+
+<p >
+	hello good morning all,welcome to qwinix
+</p>
+<label>Enter your name</label>
+<input type="text" id="de" name="submit" onkeyup="myKey()">
+<script type="text/javascript">
+function subMit()
+{
+	var a = document.getElementById('fname').value;
+	document.getElementById('first').innerHTML = "fname "  + a;
+
+	var b = document.getElementById('lname').value;
+		document.getElementById('first1').innerHTML = "lname " + b;
+
+	var c = document.getElementById('option').value;
+		document.getElementById('first2').innerHTML = "option " + c;
+
+	var d = document.getElementById('company').value;
+		document.getElementById('first3').innerHTML = "company " + d;
+}
+
+function myFunction() {
+    var x = document.getElementById("option").value;
+    document.getElementById("demo").innerHTML = "You selected: " + x;
+}
+function changeImg(x)
+{
+	x.src = "offer.jpg"
+}
+function normalImg(y)
+{
+	y.src = "mainadver.jpg" 
+}
+function myKey()
+{
+	var x = document.getElementById("de");
+	x.value = x.value.toUpperCase();
+	x.value = x.value.toLowerCase();
+}
+</script>
+
+</body>
+</html>
