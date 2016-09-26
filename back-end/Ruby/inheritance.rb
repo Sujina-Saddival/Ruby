@@ -1,4 +1,4 @@
-/*inheritence*/
+# inheritence
 class Mammal
 	def name
 		puts "cat is a Mammal"

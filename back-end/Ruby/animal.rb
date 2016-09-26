@@ -1,49 +1,46 @@
-class Animal
-	def dog_sound(x)
-		@sound=x
-		puts @sound		
-		# puts "the sound of dog is"
-		# puts "wolf-wolf"
-	end
-# 	def elephant_sound
-# 		puts "the sound of Elephant is"
-# 		puts "trumph"
-# 	end
-# 	def lion_sound
-# 		puts "the sound of Lion is"
-# 		puts "roar"
-# 	end
-# 	def rabbit_sound
-# 		puts "the sound of Rabbit is"
-# 		puts "squeak"
-# 	end
+class Student
+    attr_accessor :first_name, :last_name, :age
+def initialize(first, last, age)
+@first_name = first
+@last_name = last
+@age = age
 end
 
-class Dog < Animal
-	
+def birthday
+@age += 1
 end
-# class Elephant < Animal
-		
-# end
-# class Lion < Animal
-		
-# end
-# class Rabbit < Animal
-		
-# end
+end
 
-d=Dog.new
-d.dog_sound("wolf-wolf")
-d.dog_sound("wolf")
-d.dog_sound("wolf-wolf1")
-d.dog_sound("wolf2")
-d.dog_sound("wolf-wolf3")
-d.dog_sound("wolf4")
-puts d
-# e=Elephant.new
-# e.elephant_sound
-# puts e
-# l=Lion.new
-# l.lion_sound
-# r=Rabbit.new
-# r.rabbit_sound
+class ViewStudent
+def initialize(student)
+@student = student
+end
+
+def do_something
+puts "Student name: #{@student.first_name} #{@student.last_name}"
+end
+end
+
+class UpdateStudent
+def initialize(student)
+@student = student
+end
+
+def do_something
+puts "What is the student's first name?"
+@student.first_name = gets.chomp
+puts "What is the student's last name?"
+@student.last_name = gets.chomp
+puts "Updated student: #{@student.first_name} #{@student.last_name}"
+end
+end
+
+choices = [ViewStudent, UpdateStudent]
+
+student = Student.new("John", "Doe", 18)
+
+puts "Select 1 to view student or 2 to update student."
+selection = gets.chomp.to_i
+obj = choices[selection - 1]
+obj = obj.new(student)
+obj.do_something

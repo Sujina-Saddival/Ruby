@@ -26,6 +26,16 @@ describe "Convertor" do
 		end
 			it "should return III when given 3" do
 			c=Convertor.new
+			roman = c.convert(3)
+			expect(roman).to eq "III"
+		end
+		it "should return IV when given 2" do
+			c=Convertor.new
+			roman = c.convert(2)
+			expect(roman).to eq "II"
+		end
+			it "should return V when given 3" do
+			c=Convertor.new
 			roman = c.convert(2)
 			expect(roman).to eq "III"
 		end
