@@ -48,14 +48,14 @@ puts a
 
 p "method 10 :reject"
 d=(5..10).reject{|num| num.even?}
-puts d
-f=(5..10).reject(3){|num| num.odd?}
-puts f
+puts "pick odd numbers:#{d}"
+f=(5..10).reject{|num| num.odd?}
+puts "pick even numbers:#{f}"
 
 p "method 11 :sort"
-a=[1,2,3,4,5,6,7,8]
-g=a.sort
-puts g
+a=[4,5,2,3,1,6,7,8]
+puts a.sort
+
 
 p "method 12 :take_while"
 a=[1,2,3,4,5,6,7,8]
@@ -63,6 +63,39 @@ h=a.take_while{|i|i<3}
 puts s=h
 
 p "method 13 :to_a"
-j=(1..4).to_a
-puts j
+puts (1..4).to_a
 
+
+p "method 14 : to_h"
+x=%i(hello world).each_with_index.to_h
+puts x
+
+p "method 15 : Zip(merging)"
+a=["sujina","qwinix"]
+b=["saddival","technology"]
+puts a.zip(b)
+
+
+p "method 16 : group by"
+a=["hello","world","wel","all"]
+b=a.group_by{|cat| cat.length<=3}
+puts b
+
+p "method 17 : each_with_index"
+a=["hello","world","welcome","all"]
+a.each_with_index do |value,index| 
+puts "#{index}:#{value}"
+end
+
+p "method 18 : min"
+a=["sujina","hello","eei","aaggfa","podsf"]
+b=a.min(2)
+puts b
+
+p "method 19 : max"
+a=["sujina","hello","eei","aaggfa","podsf"]
+n=a.max(2)
+puts n
+
+# p "method 20 : creating an array"
+# puts %w=[qwinix technology mysore]
