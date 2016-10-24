@@ -1,0 +1,10 @@
+Welocme to all
+
+Enter deatils
+
+<%= form_for(@student,url:new_path) do |f|%>
+Enter your name: <%= f.text_field :name%><br />
+Enter your semister: <%= f.text_field :sem%><br />
+Enter your USN: <%= f.text_field :usn%><br />
+<%= f.submit :CLICK_HERE%>
+<%end%>
