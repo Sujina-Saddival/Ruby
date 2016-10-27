@@ -1,0 +1,13 @@
+<center>
+<h1 style="color:red">Enter the details to be edited</h1>
+
+<%= form_for :student,url:student_edit_path(@student), method: :put do |student| %>
+<pre style="font-size:18px;color:blue">
+Enter the First name  <%= student.text_field :firstname%></br></br>
+Enter the Last name   <%= student.text_field :lastname%></br></br>
+Enter the Email       <%= student.text_field :email%></br></br>
+Enter the Password    <%= student.password_field :password%></br></br>
+Submit it <%= student.submit :Click%>
+</pre>
+<%end%>
+</center>
