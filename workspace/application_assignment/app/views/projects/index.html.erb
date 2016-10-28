@@ -1,0 +1,24 @@
+<center>
+<h1 style="color:blue">Listing the details</h1>
+<table border="1px solid black;border-spacing: 5px;">
+	<tr style="color:red">
+		<th>Name</th>
+		<th>Duration</th>
+		<th>Team size</th>
+		<th>Cost</th>
+		<th>Domain</th>
+		
+	</tr>
+	<% @projects.each do |project|%>
+	<tr>
+		<td><%= project.name%></td>
+		<td><%= project.duration%></td>
+		<td><%= project.team_size%></td>
+		<td><%= project.cost%></td>
+		<td><%= project.domain%></td>
+		
+	</tr>
+	<%end%>
+</table></br></br>
+<p style="color:blue">	Click here to profile page <%= link_to 'Profile page', student_profile_path%></p>
+</center>

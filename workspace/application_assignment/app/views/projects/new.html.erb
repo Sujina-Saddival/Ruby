@@ -1,0 +1,24 @@
+<style type="text/css">
+	.pre{
+		font-size:18px;
+		font-style:italic;
+		color:blue
+	}
+</style>
+
+
+<h2 style="color:red">Enter the details of Project</h2>
+<hr>
+<%= form_for @project,url:project_create_path do |project| %>
+
+
+<div class="pre">
+Enter the Name  <%= project.text_field :name%></br></br>
+Enter the Duration   <%= project.text_field :duration%></br></br>
+Enter Team Size       <%= project.text_field :team_size%></br></br>
+Enter the Cost    <%= project.text_field :cost%></br></br>
+Enter the Domain    <%= project.text_field :domain%></br></br>
+
+Save it <%= project.submit :Click%>
+</div>
+<% end %>

@@ -1,0 +1,21 @@
+<center>
+<h1 style="color:blue">Profile</h1>
+<table border="1px solid black;border-spacing: 5px;">
+	<tr style="color:red">
+		<th>First_name</th>
+		<th>Last_name</th>
+		<th>Email_address</th>
+		
+	</tr>
+	<% @students.each do |student|%>
+	<tr>
+		<td><%= student.firstname%></td>
+		<td><%= student.lastname%></td>
+		<td><%= student.email%></td>
+		<td><%= link_to 'Edit and Update', student_edit_path(student)%></td>
+		<td><%= link_to 'Project List'%></td>
+	</tr>
+	<%end%>
+</table></br></br>
+	 Click here to submit your Projecte <%= link_to 'Project', project_new_path%></p>
+	 </center>
