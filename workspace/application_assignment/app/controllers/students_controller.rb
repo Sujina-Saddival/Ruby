@@ -7,8 +7,11 @@ class StudentsController < ApplicationController
 	def create
 		# binding.pry
 		@student = Student.new(student_params)
-		@student.save
-		redirect_to student_index_path
+		if @student.save
+			redirect_to student_index_path
+		else
+			render "new"
+		end
 	end
 
 	def index
@@ -17,15 +20,25 @@ class StudentsController < ApplicationController
 	end
 
 	def edit
-		# binding.pry
+		binding.pry
 		@student = Student.find_by_id(params[:id])
 	end
 
+	def profile
+		@students = Student.all
+	end
+
+	
 	def update
 		# binding.pry
 		@student = Student.find_by_id(params[:id])
 		@student.update_attributes(student_params)
 		redirect_to student_index_path
+
+	end
+
+	def show
+		@student = Student.find_by_id(params[:id])
 	end
 
 	def destroy

@@ -15,8 +15,10 @@
 		
 		<td><%= link_to 'Edit_User', student_edit_path(student)%></td>
 		<td><%= link_to 'Destroy',student_destroy_path(student),method: :delete,data: {confirm:'Are you sure'} %></td>
+		
 	</tr>
 	<%end%>
 </table></br></br>
 <p style="color:blued">	Click here to create new profile <%= link_to 'New_user?', student_new_path%></p>
+	 Click here to Profile page <%= link_to 'Profile page?', student_profile_path%></p>
 </center>
